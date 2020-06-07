@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
   def hello
-    render html: "やっとデプロイできたぞー！！！！！！！！！！！！！"
+    render html: "マジンガーZ"
   end
 end

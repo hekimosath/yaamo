@@ -1,0 +1,38 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'menus' %>
+<% end %>
+<h1 class="sawarabimincho">あやこのお料理手帳</h1>
+<%= link_to 'メニュー登録', new_menu_path %>
+<section class="list_wrap">
+  <% @all_menus.each do |menu| %>
+  <div class="menu_wrap">
+    <div class="menu_name">
+      <%= link_to menu.menu_name, menu %>
+      <%=  %>
+    </div>
+    <div class="image_wrap">
+      <img class="menu_img" src="<%= image_path("no_image.png") %>" alt="">
+    </div>
+    <div class="reference_url">
+      <a href="<%= menu.reference_url %>"><%= menu.reference_url %></a>
+    </div>
+    <div class="categories">
+      <div class="nationality">
+        <%= menu.cat_nationality %>
+      </div>
+      <div class="main_or_side">
+        <%= menu.cat_main_or_side %>
+      </div>
+    </div>
+    <div class="tags">
+      タグ：<%= menu.tags %>
+    </div>
+    <div class="materials">
+      材料：<%= menu.materials %>
+    </div>
+    <div class="notes">
+      備考：<%= menu.notes %>
+    </div>
+  </div>
+  <% end %>
+</section>

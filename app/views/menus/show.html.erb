@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Menu name:</strong>
+  <%= @menu.menu_name %>
+</p>
+
+<p>
+  <strong>Reference url:</strong>
+  <%= @menu.reference_url %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @menu.notes %>
+</p>
+
+<p>
+  <strong>Cat nationality:</strong>
+  <%= @menu.cat_nationality %>
+</p>
+
+<p>
+  <strong>Cat main or side:</strong>
+  <%= @menu.cat_main_or_side %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @menu.tags %>
+</p>
+
+<p>
+  <strong>Materials:</strong>
+  <%= @menu.materials %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @menu.created %>
+</p>
+
+<p>
+  <strong>Updated:</strong>
+  <%= @menu.updated %>
+</p>
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

@@ -1,0 +1,54 @@
+// Place all the styles related to the menus controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.table_wrap {
+
+  padding:0 10vw;
+}
+.list_wrap {
+  margin-top: 10vh;
+  padding-bottom:10vh;
+}
+.menu_wrap {
+  width:80vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3vh;
+  border:solid 1px gray;
+}
+.menu_name {
+  background: #ffddff;
+  padding:10px 3vw;
+  font-size: 1.6rem;
+  font-weight:bold;
+}
+.image_wrap {
+  text-align: center;
+  padding:5vh 0;
+}
+.menu_img {
+  max-width:300px;
+  width: 50%;
+  border:solid 1px lightgray;
+}
+.reference_url {
+  border-top :solid 1px gray;
+  padding:3px 3vw;
+}
+.categories {
+  display:flex;
+  border-top :solid 1px gray;
+}
+.categories div{
+  width:50%;
+  padding:3px 3vw;
+}
+.nationality {
+  border-right:solid 1px gray;
+}
+
+.tags,.materials,.notes {
+  padding: 3px 3vw;
+  border-top: solid 1px gray;
+}

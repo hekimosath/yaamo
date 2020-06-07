@@ -1,0 +1,64 @@
+<%= form_with(model: menu, local: true) do |form| %>
+  <% if menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+      <ul>
+        <% menu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="col-md-1">
+      <%= form.label :menu_name, "料理名" %>
+    </div>
+    <div class="">
+      <%= form.text_field :menu_name %>
+    </div>
+  </div>
+  <div class="field">
+    <%= form.label :reference_url, "参考URL" %>
+    <%= form.text_field :reference_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes, "備考" %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cat_nationality, "料理の国籍" %>
+    <%= form.number_field :cat_nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cat_main_or_side, "主菜・副菜" %>
+    <%= form.number_field :cat_main_or_side %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags, "タグ（カンマ区切り）" %>
+    <%= form.text_field :tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :materials, "材料（カンマ区切り）" %>
+    <%= form.text_field :materials %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created, "作成日" %>
+    <%= form.datetime_select :created %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated, "更新日" %>
+    <%= form.datetime_select :updated %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
